@@ -42,10 +42,14 @@ private:
     void SendMessageToServer(std::vector<uint8_t> &&buffer);
 
     void OnClientHello(GCMessageRead &messageRead);
+    void OnMatchmakingHello();
+    void OnRequestInventoryRefresh();
     void AdjustItemEquippedState(GCMessageRead &messageRead);
     void ClientPlayerDecalSign(GCMessageRead &messageRead);
     void UseItemRequest(GCMessageRead &messageRead);
     void ClientRequestJoinServerData(GCMessageRead &messageRead);
+    void OnMatchmakingStart(GCMessageRead &messageRead);
+    void OnMatchmakingStop(GCMessageRead &messageRead);
     void SetItemPositions(GCMessageRead &messageRead);
     void IncrementKillCountAttribute(GCMessageRead &messageRead);
     void ApplySticker(GCMessageRead &messageRead);
